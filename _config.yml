@@ -18,19 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: P4RM
-email: contact@p4rm.com
+title: justaos
+email: support@justaos.com
 description: Sleek and powerful platform for faster and easier application development
 tagline: Sleek and powerful platform for faster and easier application development
 
-twitter_username: P4rmInc
-facebook_username: p4rm.inc
-linkedin_username: p4rm
-github_username: p4rm
+twitter_username: just_a_os
+facebook_username: justaos.inc
+linkedin_username: justaos
+github_username: justaos
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://cli.p4rm.com
+url: https://justaos.com
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
