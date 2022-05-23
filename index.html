@@ -1,10 +1,6 @@
 ---
 layout: default
 root: true
-banner:
-    title: Start Here
-    description: <b>JUSTAOS</b> is a sleek and powerful platform for faster and easier application development.
-    background_image: /assets/setup.svg
 css:
 - /index.css
 ---
@@ -13,13 +9,24 @@ css:
     <div class="banner-content-section">
       <div class="banner-content">
         <goat-text type="heading">
-          {{page.banner.title}}
+          Start Here
         </goat-text>
-        <goat-text size="xl">{{page.banner.description}}</goat-text>
+        <goat-text size="xl"><b>{{site.title}}</b> is a sleek and powerful platform for faster and easier application development.</goat-text>
       </div>
     </div>
     <div class="banner-image-section">
       <img src="/assets/setup.svg" alt="Image" class="img-fluid">
     </div>
+  </div>
+</div>
+
+<div class='container'>
+
+  <div class='section'>
+    <goat-text type='heading' level='2' size='sm'>Install Prerequisite Software:</goat-text>
+    <ul>
+      <li>NodeJS 14.9.0 (<goat-link href="https://nodejs.org/download/release/v14.9.0/" target="_blank">https://nodejs.org/download/release/v14.9.0/</goat-link>)</li>
+      <li>MongoDB 5.0.8 (<goat-link href="https://www.mongodb.com/try/download/community" target="_blank">https://www.mongodb.com/try/download/community</goat-link>)</li>
+    </ul>
   </div>
 </div>

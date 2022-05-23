@@ -45,20 +45,20 @@ html.hydrated {
 
 :root {
   --header-height: 5rem;
-  --color-brand-primary-10: #D6E4FF;
-  --color-brand-primary-20: #D6E4FF;
-  --color-brand-primary-30: #ADC8FF;
-  --color-brand-primary-40: #84A9FF;
-  --color-brand-primary-50: #6690FF;
-  --color-brand-primary-60: #3366FF;
+  --color-brand-primary-10: var(--color-primary-10);
+  --color-brand-primary-20: var(--color-primary-20);
+  --color-brand-primary-30: var(--color-primary-30);
+  --color-brand-primary-40: var(--color-primary-40);
+  --color-brand-primary-50: var(--color-primary-50);
+  --color-brand-primary-60: var(--color-primary-60);
 
-  --color-brand-primary: #3366FF;
-  --color-brand-secondary-10: #D6E4FF;
-  --color-brand-secondary-20: #D6E4FF;
-  --color-brand-secondary-30: #ADC8FF;
-  --color-brand-secondary-40: #84A9FF;
-  --color-brand-secondary-50: #6690FF;
-  --color-brand-secondary-60: #3366FF;
+  --color-brand-primary: var(--color-primary);
+  --color-brand-secondary-10: var(--color-primary-10);
+  --color-brand-secondary-20: var(--color-primary-20);
+  --color-brand-secondary-30: var(--color-primary-30);
+  --color-brand-secondary-40: var(--color-primary-40);
+  --color-brand-secondary-50: var(--color-primary-50);
+  --color-brand-secondary-60: var(--color-primary-60);
 
 }
 
