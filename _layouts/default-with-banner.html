@@ -1,0 +1,38 @@
+---
+layout: base
+---
+{% include header.html %}
+<div class="banner-title">
+  <goat-text type="heading">{{page.title}}</goat-text>
+</div>
+<div class="project-content container">
+  {{ content }}
+</div>
+
+<div class='social-icons show-desktop hide-mobile'>
+  <goat-button variant="link" target="_blank"
+               href="https://youtube.com/c/{{ site.author.youtube }}" title="Youtube" rel="noopener"
+               icon="youtube"></goat-button>
+  <goat-button variant="link" target="_blank"
+               href="https://twitter.com/{{ site.author.twitter }}" title="Twitter" rel="noopener"
+               icon="twitter"></goat-button>
+  <goat-button variant="link" target="_blank"
+               href="https://www.linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn" rel="noopener"
+               icon="linkedin"></goat-button>
+  <goat-button variant="link" target="_blank"
+               href="https://github.com/{{ site.author.github }}" title="Github" rel="noopener"
+               icon="github"></goat-button>
+
+  <goat-button variant="link" target="_blank"
+               href="mailto:{{site.email}}" title="Mail" rel="noopener"
+               icon="envelope"></goat-button>
+</div>
+
+<div class='made-in-india show-desktop hide-mobile'>
+  <span>&copy; 2022 <goat-link class='no-decoration' href='{{site.author_url}}'>{{site.title}}</goat-link>.</span>
+  <img class='country-flag' src='https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/in.svg' /> Made in
+  India.
+</div>
+
+{% include footer.html %}
+{% include scripts.html %}

@@ -1,26 +1,35 @@
-<div class="footer py-5 text-center">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-12">
-                <p>
-                    <a href="https://facebook.com/{{site.facebook_username}}" target="_blank" class="p-3"><span class="icon-facebook"></span></a>
-                    <a href="https://twitter.com/{{site.twitter_username}}" target="_blank" class="p-3"><span class="icon-twitter"></span></a>
-                    <a href="https://linkedin.com/company/{{site.linkedin_username}}" target="_blank" class="p-3"><span class="icon-linkedin"></span></a>
-                    <a href="https://github.com/{{site.github_username}}" target="_blank" class="p-3"><span class="icon-github"></span></a>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="mb-0">
-                    Designed and built by <a href="https://shivajivarma.com" target="_blank">@shivaji_varma</a>
-                </p>
-                <p class="mb-0">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-            </div>
-        </div>
+<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+  <div class="section-container">
+    <div class="social-links">
+      <goat-text size="xl" class="inherit">Follow me</goat-text>
+      <div class="social-links__links">
+        <goat-button variant="link" class="color-secondary" target="_blank"
+                     href="https://twitter.com/{{ site.author.twitter }}" title="Twitter" rel="noopener"
+                     icon="twitter"></goat-button>
+        <goat-button variant="link" class="color-secondary" target="_blank"
+                     href="https://www.linkedin.com/in/{{ site.author.linkedin }}" title="LinkedIn" rel="noopener"
+                     icon="linkedin"></goat-button>
+        <goat-button variant="link" class="color-secondary" target="_blank"
+                     href="https://github.com/{{ site.author.github }}" title="Github" rel="noopener"
+                     icon="github"></goat-button>
+        <goat-button variant="link" class="color-secondary" target="_blank"
+                     href="https://youtube.com/c/{{ site.author.youtube }}" title="Youtube" rel="noopener"
+                     icon="youtube"></goat-button>
+        <goat-button variant="link" class="color-secondary" target="_blank"
+                     href="mailto:{{site.email}}" title="Mail" rel="noopener"
+                     icon="envelope"></goat-button>
+      </div>
     </div>
-</div>
+    <div class="first-row">
+      <div class="logo">
+        <img src="/assets/img/logo.png" alt="JUSTAOS Logo"></img>
+        <goat-divider vertical></goat-divider>
+        <goat-text>JUSTAOS</goat-text>
+      </div>
+      <div class="global-links">
+        <goat-link href="{{ site.baseurl }}/privacy">Privacy</goat-link>
+        <goat-link rel="license noopener" href="{{ site.baseurl }}/LICENSE">License</goat-link>
+      </div>
+    </div>
+  </div>
+</footer>

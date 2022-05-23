@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }} &middot; {{
+    site.tagline }}{% endif %}</title>
+
+  <!-- Page meta data -->
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="copyright" content="(c) {{ site.time | date: '%Y' }} {{ site.author.name }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{{ site.type }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.img }}{{ site.author.avatar }}">
+  <meta property="og:site_name" content="{{ site.author.name }}">
+  <meta property="fb:admins" content="{{ site.author.fbid }}">
+
+  <meta property="og:title"
+        content="{% if page.title %}{{ page.title }} &middot; {{ site.title }}{% else %}{{ site.title }} &middot; {{ site.tagline }}{% endif %}">
+  <meta name="description" property="og:description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{{ site.title }}{% for keyword in page.keywords %}, {{ keyword }}{% endfor %}">
+
+  <!-- RSS ><link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"-->
+  <!-- Icons -->
+  <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}{{ site.img }}/favicon.png">
+  <link rel="author" href="https://twitter.com/{{ site.author.twitter }}?rel=author">
+  <link rel="publisher" href="https://twitter.com/{{ site.author.twitter }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+        href="{{'/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="stylesheet" type="text/css"
+        href="{{ site.baseurl }}/assets/node_modules/@goatui/components/dist/goatui/assets/styles/theme.css">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}{{ site.css }}/main.css">
+
+  {% for css in page.css %}
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}{{ site.css }}{{ css }}">
+  {% endfor %}
+
+  <script src='{{ site.baseurl }}/assets/node_modules/jquery/dist/jquery.min.js'></script>
+
+  {% include google-analytics.html %}
+</head>
+
+	<body id=body itemscope itemtype="http://schema.org/WebPage">
+
+		{{ content }}
+
+	</body>
+</html>

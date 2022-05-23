@@ -1,36 +1,33 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+#Jekyll settings
+encoding: UTF-8
+permalink:	pretty
+highlighter: rouge
+include: ['.gitignore']
+sass:
+  style: compressed
 
-title: justaos
+title: JUSTAOS
 email: support@justaos.com
 description: Sleek and powerful platform for faster and easier application development
 tagline: Sleek and powerful platform for faster and easier application development
 
-twitter_username: just_a_os
-facebook_username: justaos.inc
-linkedin_username: justaos
-github_username: justaos
+# Author details
+author:
+  name:           'Shivaji Varma'
+  location:        'Bangalore, India'
+  gpage:          +ShivajivarmaDotCom
+  email:          contact@shivajivarma.com
+  avatar:         /profile.min.png
+  github:         justaos
+  linkedin:       justaos
+  twitter:        just_a_os
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://justaos.com
+
+script: 'https://unpkg.com/@goatui/components@0.9.10/dist/goatui/goatui.esm.js'
+themeCss: 'https://unpkg.com/@goatui/components@0.9.10/dist/goatui/assets/styles/theme.css'
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -38,11 +35,13 @@ url: https://justaos.com
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ''
 
-include:
-  - .well-known
+# Path to assets
+css:      /assets/css
+img:      /assets/img
+js:       /assets/js
+fonts:    /assets/fonts
+docs:     /assets/docs
 
-sass:
-  style: compressed
 
 compress_html:
   clippings: all
@@ -52,39 +51,36 @@ compress_html:
 # Build settings
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
   - jekyll-assets
 
+
 assets:
-  compression: true
+
   assets:
     - "*.png"
-    - "_scss/styles.scss"
-  digest: true
-  defaults:
-    js: { integrity: false } # true on JEKYLL_ENV=production
-    css: { integrity: false } # true on JEKYLL_ENV=production
-    img: { integrity: false } # true on JEKYLL_ENV=production
-  plugins:
-    css: { autoprefixer: {}}
-    img: { optim: {}}
+
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+
+defaults:
+  -
+    scope:
+      path: "assets/material-kit/**/*.*"
+    values:
+      sitemap:         false
+  -
+    scope:
+      path: "assets/includes/**/*.*"
+    values:
+      sitemap:         false
 
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Build settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-assets
+  - jekyll-spark
+  - jekyll-redirect-from

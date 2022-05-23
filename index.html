@@ -3,10 +3,23 @@ layout: default
 root: true
 banner:
     title: Start Here
-    description: <b>PARM</b> is a sleek and powerful platform for faster and easier application development.
+    description: <b>JUSTAOS</b> is a sleek and powerful platform for faster and easier application development.
     background_image: /assets/setup.svg
+css:
+- /index.css
 ---
-
-<!-- Banner  -->
-{% include banner.html data=page.banner %}
-<!--/ Banner  -->
+<div class="banner">
+  <div class="section-container">
+    <div class="banner-content-section">
+      <div class="banner-content">
+        <goat-text type="heading">
+          {{page.banner.title}}
+        </goat-text>
+        <goat-text size="xl">{{page.banner.description}}</goat-text>
+      </div>
+    </div>
+    <div class="banner-image-section">
+      <img src="/assets/setup.svg" alt="Image" class="img-fluid">
+    </div>
+  </div>
+</div>

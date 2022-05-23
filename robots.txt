@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow:
 Disallow: /no-search/
-Sitemap: https://cli.plt4rm.com/sitemap.xml
+Sitemap: https://justaos.com/sitemap.xml

@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<style>
+  .notice-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: var(--spacing-4);
+  }
+  .notice-content {
+    padding-top: var(--spacing-4);
+  }
+  .notice-content goat-text {
+    padding-top: var(--spacing-2);
+  }
+</style>
+<div class="notice-container">
+
+  <goat-text type="heading" size="sm">
+    {{ page.title }}
+  </goat-text>
+  <div class="notice-content">{{ content }}</div>
+</div>
+{% include scripts.html %}

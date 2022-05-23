@@ -1,0 +1,16 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+{% if page.root != true %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-c.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-python.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-java.min.js"></script>
+{% endif %}
+<script src="{{ site.baseurl }}{{ site.js }}/main.js"></script>
+
+<!--   Core JS Files   -->
+<script type='module' src='{{ site.baseurl }}/assets/node_modules/@goatui/components/dist/goatui/goatui.esm.js'></script>
+
+{% for js in page.js %}<script type="text/javascript" src="{{ site.baseurl }}{{ site.js }}/{{ js }}"></script>{% endfor %}
+{% for script in page.scripts %}<script type="text/javascript" src="{{ script }}"></script>{% endfor %}
