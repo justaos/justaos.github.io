@@ -104,7 +104,18 @@ html[data-theme="dark"] .banner {
   }
 }
 
+.tools-item {
+  display: flex;
+  align-items: center;
+}
 
+.tools-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: var(--color-brand-primary-10);
+  margin-right: var(--spacing-2);
+}
 
 @include for-phone-only {
   .banner .section-container {
@@ -151,12 +162,18 @@ html[data-theme="dark"] .banner {
 @include for-tablet-landscape-up {
   .banner .section-container {
     .banner-content-section {
-      width: 60%;
-    }
-    .banner-image-section {
       width: 40%;
     }
+    .banner-image-section {
+      width: 60%;
+    }
   }
+}
+
+.terminal {
+  background: var(--color-primary-50);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 

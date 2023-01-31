@@ -11,11 +11,17 @@ css:
         <goat-text type="heading">
           Start Here
         </goat-text>
-        <goat-text size="xl"><b>{{site.title}}</b> is a sleek and powerful platform for faster and easier application development.</goat-text>
+        <goat-text size="xl"><b>{{site.title}}</b> is a sleek and powerful platform for faster and easier application
+          development.
+        </goat-text>
+
+        <br/><br/>
+        <goat-button href="https://demo.app.justaos.com">Demo</goat-button>
+        <goat-text size="sm">Note: Use username: <b>admin</b> and password: <b>admin</b> to login into instance</goat-text>
       </div>
     </div>
     <div class="banner-image-section">
-      <img src="/assets/setup.svg" alt="Image" class="img-fluid">
+      <img src="/assets/img/demo.png" alt="Image" class="img-fluid">
     </div>
   </div>
 </div>
@@ -23,10 +29,42 @@ css:
 <div class='container'>
 
   <div class='section'>
-    <goat-text type='heading' level='2' size='sm'>Install Prerequisite Software:</goat-text>
-    <ul>
-      <li>NodeJS 14.9.0 (<goat-link href="https://nodejs.org/download/release/v14.9.0/" target="_blank">https://nodejs.org/download/release/v14.9.0/</goat-link>)</li>
-      <li>MongoDB 5.0.8 (<goat-link href="https://www.mongodb.com/try/download/community" target="_blank">https://www.mongodb.com/try/download/community</goat-link>)</li>
-    </ul>
+    <goat-text type='heading' level='2' size='sm'>Prerequisites</goat-text>
+    <div>
+      <div class="tools-item"><img class="tools-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/denojs-original.svg"/> Deno v1.30.0 (
+        <goat-link href="https://deno.land/manual@v1.30.0/getting_started/installation" target="_blank">
+          https://deno.land/manual@v1.30.0/getting_started/installation
+        </goat-link>
+        )
+      </div>
+      <div class="tools-item"><img class="tools-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"/> MongoDB 5.0.8 (
+        <goat-link href="https://www.mongodb.com/try/download/community" target="_blank">
+          https://www.mongodb.com/try/download/community
+        </goat-link>
+        )
+      </div>
+    </div>
+  </div>
+
+  <div class='section'>
+    <goat-text type='heading' level='2' size='sm'>Install justaos</goat-text>
+    <goat-code-highlighter language="bash">
+deno install -A --unstable -n justaos https://deno.land/x/justaos/mod.ts
+    </goat-code-highlighter>
+  </div>
+
+  <div class='section'>
+    <goat-text type='heading' level='2' size='sm'>Run application</goat-text>
+    <goat-code-highlighter language="bash">
+justaos new project-name
+cd project-name
+deno run -A --unstable main.ts
+    </goat-code-highlighter>
+
+    <br/>
+    <goat-text >Run using pm2, as background service</goat-text>
+    <goat-code-highlighter language="bash">
+pm2 start main.ts --interpreter="deno" --interpreter-args="run -A --unstable"
+    </goat-code-highlighter>
   </div>
 </div>

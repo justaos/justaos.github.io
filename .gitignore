@@ -9,6 +9,7 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 
+node_modules/
 .stencil/
 .idea/
 .vscode/
