@@ -107,11 +107,13 @@ html[data-theme="dark"] .banner {
 .tools-item {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  padding-bottom: .5rem;
 }
 
 .tools-icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
   background: var(--color-brand-primary-10);
   margin-right: var(--spacing-2);
