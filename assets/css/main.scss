@@ -44,7 +44,7 @@ html.hydrated {
 }
 
 :root {
-  --header-height: 5rem;
+  --header-height: 4rem;
   --color-brand-primary-10: var(--color-primary-10);
   --color-brand-primary-20: var(--color-primary-20);
   --color-brand-primary-30: var(--color-primary-30);
@@ -68,6 +68,10 @@ html.hydrated {
   left: 0;
   right: 0;
   z-index: 1000;
+  background: var(--color-primary-10);
+  .slot-right {
+    margin-right: .5rem;
+  }
 }
 
 .footer {

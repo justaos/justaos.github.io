@@ -33,7 +33,7 @@
         href="{{'/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 
   <link rel="stylesheet" type="text/css"
-        href="{{ site.baseurl }}/assets/node_modules/@goatui/components/dist/goatui/assets/styles/theme.css">
+        href="{{ site.themeCss }}">
 
   <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}{{ site.css }}/main.css">
 
@@ -41,7 +41,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}{{ site.css }}{{ css }}">
   {% endfor %}
 
-  <script src='{{ site.baseurl }}/assets/node_modules/jquery/dist/jquery.min.js'></script>
 </head>
 
 	<body id=body itemscope itemtype="http://schema.org/WebPage">

@@ -11,13 +11,18 @@ css:
         <goat-text type="heading">
           Start Here
         </goat-text>
-        <goat-text size="xl"><b>{{site.title}}</b> is a sleek and powerful platform for faster and easier application
+        <goat-text expressive><b>{{site.title}}</b> is a sleek and powerful platform for faster and easier application
           development.
         </goat-text>
 
         <br/><br/>
-        <goat-button href="https://demo.app.justaos.com">Demo</goat-button>
-        <goat-text size="sm">Note: Use username: <b>admin</b> and password: <b>admin</b> to login into instance</goat-text>
+        <goat-button href="https://demo.app.justaos.com" icon="launch">Launch demo instance</goat-button>
+        <goat-text>Note: Use username: <b>admin</b> and password: <b>admin</b> to login into instance</goat-text>
+
+        <br/>
+
+        <goat-text expressive>Watch demo of TODO application build using JUSTAOS platform</goat-text>
+        <goat-button href="https://www.youtube.com/watch?v=PKmrT1YZtE8" color="error" icon="logo--youtube">Watch demo</goat-button>
       </div>
     </div>
     <div class="banner-image-section">
@@ -49,22 +54,26 @@ css:
   <div class='section'>
     <goat-text type='heading' level='2' size='sm'>Install justaos</goat-text>
     <goat-code-highlighter language="bash">
-      deno install -A --unstable -n justaos https://deno.land/x/justaos/mod.ts
+      <pre>
+<code>deno install -A --unstable -n justaos https://deno.land/x/justaos/mod.ts</code>
+      </pre>
     </goat-code-highlighter>
   </div>
 
   <div class='section'>
     <goat-text type='heading' level='2' size='sm'>Run application</goat-text>
     <goat-code-highlighter language="bash">
-      justaos new project-name
-      cd project-name
-      deno run -A --unstable main.ts
+<pre>
+<code>justaos new project-name
+cd project-name
+deno run -A --unstable main.ts</code></pre>
     </goat-code-highlighter>
 
     <br/>
     <goat-text >Run using pm2, as background service</goat-text>
     <goat-code-highlighter language="bash">
-      pm2 start main.ts --interpreter="deno" --interpreter-args="run -A --unstable"
+<pre>
+<code>pm2 start main.ts --interpreter="deno" --interpreter-args="run -A --unstable"</code></pre>
     </goat-code-highlighter>
   </div>
 </div>

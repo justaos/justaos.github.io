@@ -1,9 +1,9 @@
 <!-- Fixed navbar -->
 <nav class="header">
   <goat-header
-    class='brand actions-separated'>
+    class='brand'>
 
-    <div slot='left-section'>
+    <div slot='left'>
       <goat-header-brand
         logo="/assets/img/logo.png"
         name="{{ site.title }}"
@@ -11,13 +11,13 @@
         href="/#"></goat-header-brand>
     </div>
 
-    <div slot='right-section'>
-      <goat-button class='full-height color-brand-primary'
-                   target="_blank"
-                   icon="github"
-                   variant='ghost'
-                   href='https://github.com/justaos'
-                   itemprop=url>Github</goat-button>
+    <div slot='right' class="slot-right">
+      <goat-button target="_blank"
+                          color="primary"
+                          icon="logo--github"
+                          variant="ghost"
+                          title="Github"
+                          href='https://github.com/justaos'></goat-button>
     </div>
   </goat-header>
 </nav>
