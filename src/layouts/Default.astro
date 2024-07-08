@@ -1,0 +1,63 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  root?: boolean;
+  keywords?: string;
+}
+
+const { title, root, description, keywords } = Astro.props;
+
+import Layout from './Base.astro';
+import site from '../_data/site.json';
+
+---
+
+<Layout title={title || site.title} description={site.tagline} keywords={keywords}>
+
+  <nav class='top-nav'>
+    <goat-header color="brand-primary" class="hide-mobile">
+      <div slot='left'>
+        <goat-header-brand logo='/assets/img/logo.png' href='/#' name={site.title} sub-title={site.tagline}></goat-header-brand>
+      </div>
+
+      <div slot='right'>
+
+
+          <goat-header-action
+                  class='show-desktop'
+                  icon='github'
+                  kind="simple"
+                  href={`https://github.com/${site.github_username}/${site.github_project}/issues`}
+                  target='_blank'
+          >Report a issue
+          </goat-header-action>
+      </div>
+    </goat-header>
+
+      <goat-header color="brand-primary" class="show-mobile">
+          <div slot='left'>
+              <goat-header-brand logo='/assets/img/logo.png' href='/#' name={site.title} sub-title={"SAAS Builder"}></goat-header-brand>
+          </div>
+
+          <div slot='right'>
+
+
+              <goat-header-action
+                      class='show-desktop'
+                      icon='github'
+                      kind="simple"
+                      href={`https://github.com/${site.github_username}/${site.github_project}/issues`}
+                      target='_blank'
+              >Report a issue
+              </goat-header-action>
+          </div>
+      </goat-header>
+
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+</Layout>

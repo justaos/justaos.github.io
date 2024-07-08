@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Default.astro';
+import site from '../_data/site.json';
+import '../styles/index.page.scss';
+---
+
+<Layout root={true}
+        keywords='SAAS BUILDER, MVP BUILDER, PROTOTYPE BUILDER'>
+
+
+    <div class="banner">
+        <goat-container>
+
+            <div class="section-container">
+                <div class="banner-content-section">
+                    <div class="banner-content">
+                        <goat-text type="heading">
+                            Start Here
+                        </goat-text>
+                        <goat-text expressive><b>{site.title}</b> is a sleek and powerful platform for faster and easier
+                            application
+                            development.
+                        </goat-text>
+
+                        <br/><br/>
+                        <goat-button href="https://demo.app.justaos.com" icon="launch">Launch demo instance
+                        </goat-button>
+                        <goat-text>Note: Use username: <b>admin</b> and password: <b>admin</b> to login into instance
+                        </goat-text>
+
+                        <br/>
+
+                        <goat-text expressive>Watch demo of TODO application build using JUSTAOS platform</goat-text>
+                        <goat-button href="https://www.youtube.com/watch?v=PKmrT1YZtE8" color="error"
+                                     icon="logo--youtube">Watch demo
+                        </goat-button>
+                    </div>
+                </div>
+                <div class="banner-image-section">
+                    <img src="/assets/img/demo.png" alt="Image" class="img-fluid">
+                </div>
+            </div>
+
+        </goat-container>
+    </div>
+
+    <div class="sections-wrapper">
+        <goat-container class="section">
+            <goat-text type="heading" heading-size="5">Prerequisites</goat-text>
+
+            <div class="tools-item">
+                <img class="tools-icon"
+                     src="https://raw.githubusercontent.com/devicons/devicon/master/icons/denojs/denojs-original.svg"/>
+                Deno v1.30.0 (<goat-link href="https://deno.land/manual@v1.30.0/getting_started/installation" target="_blank">
+                    https://deno.land/manual@v1.30.0/getting_started/installation
+                </goat-link>)
+            </div>
+            <div class="tools-item"><img class="tools-icon"
+                                         src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"/>
+                PostgreSQL 16 (<goat-link href="https://www.postgresql.org/download/windows/" target="_blank">
+                    https://www.postgresql.org/download/windows/
+                </goat-link>)
+            </div>
+
+        </goat-container>
+
+        <goat-container class="section">
+            <goat-text type='heading' heading-size="5">Install justaos</goat-text>
+            <goat-code-highlighter language="bash">
+      <pre>
+<code>deno install -A --unstable -n justaos https://deno.land/x/justaos/mod.ts</code>
+      </pre>
+            </goat-code-highlighter>
+        </goat-container>
+
+        <goat-container class="section">
+            <goat-text type='heading' heading-size="5">Run application</goat-text>
+            <goat-code-highlighter language="bash">
+<pre>
+<code>justaos new project-name
+cd project-name
+deno run -A --unstable main.ts</code></pre>
+            </goat-code-highlighter>
+            <br/>
+            <goat-text>Run using pm2, as background service</goat-text>
+            <goat-code-highlighter language="bash"><pre>
+<code>pm2 start main.ts --interpreter="deno" --interpreter-args="run -A --unstable"</code></pre>
+            </goat-code-highlighter>
+        </goat-container>
+    </div>
+
+    <div class='social-icons'>
+        <goat-button
+                icon='logo--github'
+                icon-size='lg'
+                variant='ghost'
+                color='dark'
+                dark-mode-color='light'
+                target='_blank'
+                aria-label='Github'
+                href={`https://www.github.com/${site.github_username}`}
+        ></goat-button>
+        <goat-button
+                icon-size='lg'
+                icon='logo--linkedin'
+                color='dark'
+                dark-mode-color='light'
+                variant='ghost'
+                target='_blank'
+                aria-label='Linkedin'
+                href={`https://www.linkedin.com/company/${site.linked_username}`}
+        ></goat-button>
+    </div>
+
+    <div class='made-in-india'>
+        <span>&copy; 2023 <goat-link class='no-decoration' href={site.author_url}>{site.author}</goat-link>.</span>
+        <goat-svg class='country-flag' size='1.5rem'
+                  src='https://cdn.jsdelivr.net/gh/hampusborgos/country-flags@main/svg/in.svg'></goat-svg>
+        Made in India.
+    </div>
+
+
+</Layout>
